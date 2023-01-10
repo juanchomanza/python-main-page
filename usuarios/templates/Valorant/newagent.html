@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'perfiles/Bases/base1.html' %}
+{% block content %}
+<html>
+    <head>
+        <title>Agregar agente</title>
+        
+    </head>
+    <body>
+        <h1>Agrega al agente</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <table>
+            {{agente}}
+             </table>
+            <button type="submit">Agregar</button>
+            {% csrf_token %}
+        </form>
+
+     <a href="{% url 'valindex' %}">Volver</a>
+    </body>
+
+
+
+</html>
+{% endblock %}

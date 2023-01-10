@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'perfiles/Bases/base1.html' %}
+{% block content %}
+<head>
+<title>Editar nuevo</title>
+
+</head>
+
+<body>
+    <h1>Hola {{nuevo.name}}</h1>
+
+    <form method="GET">
+        <table>
+            {{personaForm}}
+        </table>
+        <button type="submit">Añadir</button>
+        {% csrf_token %}
+    </form>
+
+
+
+{% endblock %}

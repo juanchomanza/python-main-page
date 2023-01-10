@@ -1,0 +1,57 @@
+.fondo {
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.mifondo {
+    background-color: aqua;
+}
+
+
+.grande {
+  
+    font-size: 30px ;
+}
+
+.font{
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif ;
+}
+
+
+@keyframes miprimera {
+    from { 
+        color: red ;
+        opacity : 0;
+      }
+    to {
+        opacity: 1;
+        color:white;
+
+    }
+    
+}
+
+
+.prueba {
+    font-weight: bold;
+    font-family: sans-serif;
+    animation: infinite;
+    animation-name: miprimera;
+    animation-duration: 5s;
+    
+}
+
+.fondopro {
+        background: rgb(36,0,36);
+        background: -webkit-radial-gradient(circle, rgba(36,0,36,1) 0%, rgba(58,0,82,1) 41%, rgba(9,195,127,1) 100%);
+        background: radial-gradient(circle, rgba(36,0,36,1) 0%, rgba(58,0,82,1) 41%, rgba(9,195,127,1) 100%);
+}
+
+.links-dec {
+    border-radius: 20%;
+    background: rgb(36,0,36);
+    background: -webkit-radial-gradient(circle, rgba(36,0,36,1) 0%, rgba(58,0,82,1) 41%, rgba(9,195,127,1) 100%);
+    background: radial-gradient(circle, rgba(36,0,36,1) 0%, rgba(58,0,82,1) 41%, rgba(9,195,127,1) 100%);
+}

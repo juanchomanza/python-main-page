@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'perfiles/Bases/base1.html' %}
+{% block content %}
+<html>
+    <head>
+        <title>Campeón favorito</title>
+        
+    </head>
+    <body>
+        <h1>¿Cúal es tu campeón favorito?</h1>
+        <form method="POST">
+            <table>
+            {{campeon}}
+             </table>
+            <button type="submit">Agregar</button>
+            {% csrf_token %}
+        </form>
+
+     <a href="{% url 'index' %}">Volver al inicio</a>
+    </body>
+
+
+
+</html>
+{% endblock %}

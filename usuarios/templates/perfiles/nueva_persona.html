@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'perfiles/Bases/base1.html' %}
+{% block content %}
+<head>
+<title>Agregar nuevo</title>
+
+</head>
+
+<section class="container my-3 mifondo2">
+    <div class="row">
+        <h1>Registrate :D</h1>
+
+        <form method="POST">
+            <table>
+                {{nuevo}}
+            </table>
+            <button type="submit">Añadir</button>
+            {% csrf_token %}
+        </form>
+    </div> 
+
+
+</section>
+<section class="container my-3 mifondo2">
+    <div class="row text-center  justify-content-center">
+        <h1>Registrate :D</h1>
+
+        <form method="POST" class="table-center">
+            <table>
+                {{nuevo}}
+            </table>
+            <button type="submit">Añadir</button>
+            {% csrf_token %}
+        </form>
+        </div>
+    </div>
+
+
+
+</body>
+{% endblock %}

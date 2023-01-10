@@ -1,0 +1,45 @@
+
+{% extends 'perfiles/Bases/base1.html' %}
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agentes</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'style1.css' %}">
+    </head>
+    <body class="fondopro">
+        <div class="container">
+        <h1 class="prueba font my-3 text-center">LISTA DE AGENTES</h1>
+        
+        
+        <strong><a class="grande text-light links-dec" href="{% url 'valadd' %}">Agregar nuevo agente</a></strong>
+        <p></p>
+         <table class='table table-dark table-striped text-center align-middle table-hover'>
+        
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>NAME</th>
+                    <th>CLASS</th>
+                    <th>GENDER</th>
+                </tr>
+            </thead>
+            <tbody >
+                {% for ag in agente %}
+                <tr>
+                    
+                    <th class="valorant"><img src="{{ag.photo.url}}" width="50"></th>
+                    <th><a class='nav-link text-danger' href='agent/{{ag.agent}}' target="_blank"><h2><strong>{{ag.agent}}</strong></h2></a></th>
+                    <th>{{ag.type}}</th>
+                    <th>{{ag.gender}}</th>
+
+                </tr>
+                {% endfor %}
+                    
+ 
+
+</html>
+{% endblock %}

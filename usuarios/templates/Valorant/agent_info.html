@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'perfiles/Bases/base1.html' %}
+{% load static %}
+{% block content %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>{{agente.agent}} info</title>
+  </head>
+  <body class="">
+    <div class="align-middle">
+      <h1>{{agente.agent}}</h1>
+
+      <p>{{agente.type}}</p>
+
+      <img width="300" src="{{agente.photo.url}}" />
+
+      <p><a href="{% url 'valindex' %}">Volver atrás</a></p>
+    </div>
+  </body>
+
+{% endblock %}
+</html>

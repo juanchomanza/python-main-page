@@ -1,0 +1,86 @@
+{% extends 'perfiles/Bases/base1.html' %} 
+{% block content %} 
+{% load static %}
+
+<head>
+  <title>BIENVENIDO</title>
+  <meta charset="UTF-8" />
+</head>
+<div class="text-center my-3 font align-middle text-light">
+    <h1>Bienvenido a mi primera web</h1>
+</div>
+<section class="container my-3 mifondo2">
+    <p>{{suma}}</p>
+    <p>{{hola}}</p>
+    <p>el numero de personas registradas son {{contador}}</p>
+    <a href="{% url 'add' %}">Agregar nuevo usuario</a>
+    <div class="row text-center justify-content-center">
+        <h2>Usuarios registrados</h1>
+        <div class="col-8 my-2">
+            <table border="3" class="table table-dark">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Profesión</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tfoot>
+                {%for usuario in usuarios%}
+                <tr>
+                    <th>{{usuario.id}}</th>
+                    <th>{{usuario.name}} {{usuario.surname}}</th>
+                    <th>{{usuario.email}}</th>
+                    <th>{{usuario.career}}</th>
+                    <th><a href="perfil/{{usuario.id}}">Ver</a></th>
+                    <th><a href="editar_persona/{{usuario.id}}">Editar</a></th>
+                    <th><a href="eliminar_persona/{{usuario.id}}">Eliminar</a></th>
+                </tr>
+                {%endfor%}
+            </tfoot>
+            </table>
+             </div>
+       
+        <div class="text-center col-8">
+        <table border="3" class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Profesión</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tfoot>
+            {%for usuario in userr%}
+            <tr>
+                <th>{{usuario.id}}</th>
+                <th>{{usuario.name}} {{usuario.surname}}</th>
+                <th>{{usuario.email}}</th>
+                <th>{{usuario.career.capitalize}}</th>
+                <th><a href="perfil/{{usuario.id}}">Ver</a></th>
+                <th><a href="editar_persona/{{usuario.id}}">Editar</a></th>
+                <th><a href="eliminar_persona/{{usuario.id}}">Eliminar</a></th>
+            </tr>
+            {%endfor%}
+            </tfoot>
+        </table>
+        </div>
+       
+    </div>
+    <h2>Dinos cual es tu campeón de Lol favorito!</h2>
+    <a href="{% url 'champ' %}">aquí</a>
+    <h2>AGENTES DE VALORANT</h2>
+    <a href="{% url 'valindex' %}">Click acá para ver</a>
+</section>
+
+{% endblock %}

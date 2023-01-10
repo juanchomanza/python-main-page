@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'perfiles/Bases/base1.html' %} {% block content %}
+<html>
+  <head>
+    <title>Hola! {{persona.name}} {{persona.surname}}</title>
+  </head>
+
+  <section class="container my-3 mifondo2">
+    <div class="row text-center  justify-content-center">
+        <div class="col-6">
+            <h1 class="my-2">Perfil de {{persona.name}} {{persona.surname}}</h1>
+            <h3 class="text-muted">Información del usuario</h3>
+            <h2>Email: {{persona.email}}</h2>
+            <h2>Carrera profesional: {{persona.career}}</h2>
+
+            <p></p>
+            <a href="{% url 'index' %}">Volver al inicio</a>
+        </div>
+    </div>
+
+    {% endblock %}
+  </section>
+</html>

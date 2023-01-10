@@ -1,0 +1,44 @@
+.mifondo {
+    background-color: rgb(232, 232, 232);
+}
+
+.mifondo2 {
+    background-color: rgba(43, 43, 43, 0.6); 
+    border-radius:1%;
+    overflow: hidden;
+
+}
+
+.fond-white{
+    background-color: rgb(255, 255, 255);
+}
+
+.valorant {
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+}
+
+.valorant:hover {
+    overflow: hidden;
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.textover {
+    overflow: hidden;
+}
+
+.activo {
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 110%;
+
+}
+
+.medio{
+
+    display: flex;
+    justify-content: center;
+}

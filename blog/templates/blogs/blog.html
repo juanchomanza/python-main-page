@@ -1,0 +1,31 @@
+{% extends 'perfiles/Bases/base1.html' %}
+{% block content %}
+{% load static %}
+
+<p>XD</p>
+
+{{ response }}
+<p></p>
+{{response_json.results}}
+<p></p>
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+{% for name in response_json.results%}
+        <div class="col-3">
+            
+              <a href='{{name.url}}'>{{name.name}}</a></li>
+          
+        </div>
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}
